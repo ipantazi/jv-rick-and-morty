@@ -17,7 +17,7 @@ public record CharacterResponseDto(
                 + "The status of the character must be one of: 'Alive', 'Dead' or 'unknown'.")
         String status,
 
-        @Pattern(regexp = "^(Female|Male|Genderless|unknown)", message = "Invalid dender. "
+        @Pattern(regexp = "^(Female|Male|Genderless|unknown)", message = "Invalid gender. "
                 + "The gender of the character must be one of: 'Female', 'Male', 'Genderless' "
                 + "or 'unknown'.")
         String gender

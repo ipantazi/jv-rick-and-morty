@@ -37,9 +37,7 @@ public class CharacterService {
     }
 
     public List<CharacterInternalDto> search(CharacterSearchParameters params) {
-        System.out.println(params.name());
         Specification<Character> specification = specificationProvider.getSpecification(params);
-        System.out.println(specification);
         List<Character> characters = characterRepository.findAll(specification);
         return characters.stream().map(characterMapper::toDto).toList();
     }
